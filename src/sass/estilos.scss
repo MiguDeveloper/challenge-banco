@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+  box-sizing: inherit;
+}
+
+// Primary
+$dark-blue: hsl(233, 26%, 24%);
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+
+// Neutral
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+body {
+  background-color: white;
+  color: $grayish-blue;
+}
+
+.hero {
+  text-align: center;
+  &-title {
+    color: gra;
+    font-size: 2.1em;
+    font-weight: 300;
+    color: $dark-blue;
+  }
+  &-copy {
+    font-size: 1.4rem;
+  }
+}
+
+.button {
+  font-size: 1em;
+  border: none;
+  padding: 0.9em 2.2em;
+  background-image: linear-gradient(
+    to right,
+    $lime-green 0%,
+    $bright-cyan 100%
+  );
+  border-radius: 1.5em;
+  color: white;
+}
