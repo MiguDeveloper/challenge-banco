@@ -1,8 +1,9 @@
+@use 'header';
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 
 html {
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 * {
@@ -23,6 +24,8 @@ $light-grayish-blue: hsl(220, 16%, 96%);
 $very-light-gray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
+$wrapperSpace: 1.5em;
+
 body {
   background-color: white;
   color: $grayish-blue;
@@ -30,15 +33,57 @@ body {
 
 .hero {
   text-align: center;
+  padding-bottom: 5em;
   &-title {
-    color: gra;
-    font-size: 2.1em;
+    font-size: 2.5em;
     font-weight: 300;
     color: $dark-blue;
+    line-height: 1.3;
+    margin: 0;
+    margin-bottom: 0.5em;
   }
   &-copy {
-    font-size: 1.4rem;
+    line-height: 1.7;
+    font-size: 0.9em;
+    margin-bottom: 2.5em;
   }
+  &-image {
+    height: 300px;
+    margin: 0;
+    margin-right: -$wrapperSpace;
+    margin-left: -$wrapperSpace;
+    margin-bottom: 1.2em;
+    background: url('../images/image-mockups.png') center bottom no-repeat,
+      url('../images/bg-intro-mobile.svg') center no-repeat;
+    background-size: 345px, cover;
+  }
+}
+
+.copy {
+  line-height: 1.7;
+  font-size: 0.9em;
+  margin-bottom: 2.5em;
+}
+.title {
+  &-h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: $dark-blue;
+    line-height: 1.3;
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+}
+
+.why {
+  text-align: center;
+}
+
+.is-hidden {
+  display: none !important;
+}
+.wrapper {
+  padding: 0 $wrapperSpace;
 }
 
 .button {
