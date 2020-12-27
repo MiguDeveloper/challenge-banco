@@ -61,7 +61,7 @@ body {
   margin-bottom: 2.5em;
 }
 
-.title-h1 {
+.title-h3, .title-h2, .title-h1 {
   font-size: 2.5em;
   font-weight: 300;
   color: #2d314d;
@@ -70,8 +70,117 @@ body {
   margin-bottom: 0.5em;
 }
 
+.title-h2 {
+  font-size: 1.5em;
+}
+.title-h3 {
+  font-size: 1em;
+}
+
 .why {
   text-align: center;
+  background-color: #f3f4f6;
+  padding: 3em 0;
+}
+.why .copy {
+  margin-bottom: 4em;
+}
+.why-item .copy {
+  margin-bottom: 2em;
+}
+.why-item img {
+  margin-bottom: 1.5em;
+}
+
+.latest-articles {
+  padding: 5em 0;
+  background-color: #fafafa;
+}
+.latest-articles .title-h1 {
+  text-align: center;
+}
+.latest-articles-grid {
+  display: grid;
+  gap: 2em;
+}
+.latest-articles-item {
+  border-radius: 0.5em;
+  background-color: white;
+  overflow: hidden;
+}
+.latest-articles-item img {
+  width: 100%;
+  object-fit: cover;
+}
+.latest-articles-item small {
+  font-size: 0.6em;
+  display: block;
+  margin-bottom: 1em;
+}
+.latest-articles-item-content {
+  padding: 2em;
+}
+
+.footer {
+  background-color: #2d314d;
+  color: white;
+  padding: 2em 0;
+  text-align: center;
+}
+.footer svg {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+.footer-social {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+.footer-menu {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.footer-menu ul {
+  list-style: none;
+}
+.footer-menu ul li {
+  margin-bottom: 2em;
+}
+.footer-menu a {
+  text-decoration: none;
+  color: white;
+}
+.footer-copyright {
+  color: #9698a6;
+  margin-top: 2.5em;
+}
+
+.icon-instagram, .icon-pinterest, .icon-twitter, .icon-youtube, .icon-facebook {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  display: inline-flex;
+  margin-right: 13px;
+}
+
+.icon-facebook {
+  background-image: url("../images/icon-facebook.svg");
+}
+.icon-youtube {
+  background-image: url("../images/icon-youtube.svg");
+}
+.icon-twitter {
+  background-image: url("../images/icon-twitter.svg");
+}
+.icon-pinterest {
+  background-image: url("../images/icon-pinterest.svg");
+}
+.icon-instagram {
+  background-image: url("../images/icon-instagram.svg");
+  margin-right: 0;
 }
 
 .is-hidden {

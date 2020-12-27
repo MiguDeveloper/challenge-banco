@@ -64,19 +64,143 @@ body {
   font-size: 0.9em;
   margin-bottom: 2.5em;
 }
+
+%title {
+  font-size: 2.5em;
+  font-weight: 300;
+  color: $dark-blue;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
 .title {
   &-h1 {
-    font-size: 2.5em;
-    font-weight: 300;
-    color: $dark-blue;
-    line-height: 1.3;
-    margin: 0;
-    margin-bottom: 0.5em;
+    @extend %title;
+  }
+  &-h2 {
+    @extend %title;
+    font-size: 1.5em;
+  }
+  &-h3 {
+    @extend %title;
+    font-size: 1em;
   }
 }
 
 .why {
   text-align: center;
+  background-color: $light-grayish-blue;
+  padding: 3em 0;
+  .copy {
+    margin-bottom: 4em;
+  }
+  &-item {
+    .copy {
+      margin-bottom: 2em;
+    }
+    img {
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+.latest-articles {
+  padding: 5em 0;
+  background-color: $very-light-gray;
+  .title-h1 {
+    text-align: center;
+  }
+
+  &-grid {
+    display: grid;
+    gap: 2em;
+  }
+  &-item {
+    border-radius: 0.5em;
+    background-color: white;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    small {
+      font-size: 0.6em;
+      display: block;
+      margin-bottom: 1em;
+    }
+    &-content {
+      padding: 2em;
+    }
+  }
+}
+
+.footer {
+  background-color: $dark-blue;
+  color: white;
+  padding: 2em 0;
+  text-align: center;
+  svg {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+  &-social {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 1.5em;
+  }
+  &-menu {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 2em;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  &-copyright {
+    color: $grayish-blue;
+    margin-top: 2.5em;
+  }
+}
+
+%icon {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  display: inline-flex;
+  margin-right: 13px;
+}
+.icon {
+  &-facebook {
+    @extend %icon;
+    background-image: url('../images/icon-facebook.svg');
+  }
+  &-youtube {
+    @extend %icon;
+    background-image: url('../images/icon-youtube.svg');
+  }
+  &-twitter {
+    @extend %icon;
+    background-image: url('../images/icon-twitter.svg');
+  }
+  &-pinterest {
+    @extend %icon;
+    background-image: url('../images/icon-pinterest.svg');
+  }
+  &-instagram {
+    @extend %icon;
+    background-image: url('../images/icon-instagram.svg');
+    margin-right: 0;
+  }
 }
 
 .is-hidden {
