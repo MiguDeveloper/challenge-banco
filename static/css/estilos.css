@@ -54,6 +54,32 @@ body {
   background: url("../images/image-mockups.png") center bottom no-repeat, url("../images/bg-intro-mobile.svg") center no-repeat;
   background-size: 345px, cover;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    text-align: left;
+    background: url("../images/bg-intro-desktop.svg") left 650px top -290px no-repeat;
+    background-size: cover;
+    min-height: 550px;
+    box-sizing: border-box;
+  }
+  .hero-content {
+    display: grid;
+    min-height: 550px;
+    grid-template-areas: "description image";
+    grid-template-columns: 368px 1fr;
+    align-items: center;
+  }
+  .hero-image {
+    grid-area: image;
+    min-height: inherit;
+    position: absolute;
+    width: 703px;
+    right: 0;
+    height: 814px;
+    background-size: cover;
+    background: url("../images/image-mockups.png") right -100px bottom no-repeat;
+  }
+}
 
 .copy {
   line-height: 1.7;
@@ -189,6 +215,8 @@ body {
 
 .wrapper {
   padding: 0 1.5em;
+  max-width: 1115px;
+  margin: auto;
 }
 
 .button {
