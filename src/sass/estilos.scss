@@ -76,9 +76,17 @@ body {
       min-height: inherit;
       position: absolute;
       width: 703px;
-      right: 0;
+      left: 480px;
       height: 814px;
       background-size: cover;
+      background: url('../images/image-mockups.png') left bottom no-repeat;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    background: url('../images/bg-intro-desktop.svg') left 650px top -290px no-repeat;
+    &-image {
+      width: 730px;
       background: url('../images/image-mockups.png') right -100px bottom no-repeat;
     }
   }
@@ -248,4 +256,58 @@ body {
   );
   border-radius: 1.5em;
   color: white;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &-button {
+    width: 40px;
+    height: 40px;
+    background: url('../images/icon-hamburger.svg') no-repeat center;
+  }
+  a {
+    text-decoration: none;
+    color: $grayish-blue;
+    padding: 0 0.8em;
+  }
+  &-checkbox {
+    display: none;
+    &:checked {
+      & ~ .menu-button {
+        background: url('../images/icon-close.svg') no-repeat center;
+      }
+      & ~ .menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        padding: 1em;
+        background: linear-gradient(to bottom, $dark-blue 0%, transparent 100%);
+        left: 0;
+        right: 0;
+        height: 100vh;
+        li {
+          margin-bottom: -1px;
+          background-color: white;
+          &:first-child {
+            padding-top: 2em;
+            border-radius: 0.5em 0.5em 0 0;
+          }
+          &:last-child {
+            padding-bottom: 2em;
+            border-radius: 0 0 0.5em 0.5em;
+          }
+        }
+        a {
+          transition: all 2500ms;
+          padding: 1em;
+          display: block;
+          text-align: center;
+          color: $dark-blue;
+        }
+      }
+    }
+  }
 }

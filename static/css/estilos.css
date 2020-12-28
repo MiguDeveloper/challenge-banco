@@ -4,11 +4,7 @@
   padding: 1em 1.5em;
   flex-flow: row wrap;
   justify-content: space-between;
-}
-
-.menu {
-  width: 30px;
-  background: url("../images/icon-hamburger.svg") no-repeat center;
+  position: relative;
 }
 
 html {
@@ -74,9 +70,18 @@ body {
     min-height: inherit;
     position: absolute;
     width: 703px;
-    right: 0;
+    left: 480px;
     height: 814px;
     background-size: cover;
+    background: url("../images/image-mockups.png") left bottom no-repeat;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    background: url("../images/bg-intro-desktop.svg") left 650px top -290px no-repeat;
+  }
+  .hero-image {
+    width: 730px;
     background: url("../images/image-mockups.png") right -100px bottom no-repeat;
   }
 }
@@ -226,6 +231,58 @@ body {
   background-image: linear-gradient(to right, #31d35c 0%, #2bb7da 100%);
   border-radius: 1.5em;
   color: white;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-button {
+  width: 40px;
+  height: 40px;
+  background: url("../images/icon-hamburger.svg") no-repeat center;
+}
+.menu a {
+  text-decoration: none;
+  color: #9698a6;
+  padding: 0 0.8em;
+}
+.menu-checkbox {
+  display: none;
+}
+.menu-checkbox:checked ~ .menu-button {
+  background: url("../images/icon-close.svg") no-repeat center;
+}
+.menu-checkbox:checked ~ .menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  padding: 1em;
+  background: linear-gradient(to bottom, #2d314d 0%, transparent 100%);
+  left: 0;
+  right: 0;
+  height: 100vh;
+}
+.menu-checkbox:checked ~ .menu li {
+  margin-bottom: -1px;
+  background-color: white;
+}
+.menu-checkbox:checked ~ .menu li:first-child {
+  padding-top: 2em;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.menu-checkbox:checked ~ .menu li:last-child {
+  padding-bottom: 2em;
+  border-radius: 0 0 0.5em 0.5em;
+}
+.menu-checkbox:checked ~ .menu a {
+  transition: all 2500ms;
+  padding: 1em;
+  display: block;
+  text-align: center;
+  color: #2d314d;
 }
 
 /*# sourceMappingURL=estilos.css.map */

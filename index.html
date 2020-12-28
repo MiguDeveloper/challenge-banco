@@ -17,7 +17,15 @@
   <body>
     <header class="header">
       <img src="./static/images/logo.svg" alt="" />
-      <nav class="menu"></nav>
+      <input type="checkbox" id="menu" class="menu-checkbox" />
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+      <label class="menu-button" for="menu"></label>
     </header>
 
     <section class="hero">
@@ -195,14 +203,5 @@
     <div class="header-button">
       <button class="btn">Request Invite</button>
     </div>
-    <nav id="header-menu">
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Blog</li>
-        <li>Careers</li>
-      </ul>
-    </nav>
   </body>
 </html>

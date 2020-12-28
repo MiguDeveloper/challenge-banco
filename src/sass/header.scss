@@ -3,9 +3,5 @@
   padding: 1em 1.5em;
   flex-flow: row wrap;
   justify-content: space-between;
-}
-
-.menu {
-  width: 30px;
-  background: url('../images/icon-hamburger.svg') no-repeat center;
+  position: relative;
 }
